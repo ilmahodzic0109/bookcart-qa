@@ -1,4 +1,4 @@
-# 📋 BookCart QA – Test Plan
+# BookCart QA – Test Plan
 
 **Project Name:** BookCart QA Automation Assignment  
 **Tester:** Ilma Hodžić  
@@ -19,7 +19,7 @@ To validate the main e-commerce flows of the BookCart web application including 
 
 ## 2. Scope
 
-### ✅ In Scope
+### In Scope
 - Registration and username validation
 - Login with JWT token handling
 - Book search, view similar books, category filtering
@@ -29,7 +29,7 @@ To validate the main e-commerce flows of the BookCart web application including 
 - Token-based protected API calls
 - Observing frontend-backend sync via DevTools
 
-### ❌ Out of Scope:
+### Out of Scope:
 - Payment gateway simulation (not implemented)
 - Database verification
 - Mobile device testing
@@ -100,10 +100,10 @@ To validate the main e-commerce flows of the BookCart web application including 
 ## 8. Suggested Test Flows
 
 These flows will be developed in **Task 2 (test cases)** and partially automated in **Task 4**:
-- [x] Register new user (valid and invalid)
-- [x] Login/logout
-- [x] Search and view book details
-- [x] Add/remove wishlist
-- [x] Add, update, and remove cart items
-- [x] Proceed to checkout and view order
-- [x] Switch categories and verify product updates
+- Register new user (valid and invalid)
+- Login/logout
+- Search and view book details
+- Add/remove wishlist
+- Add, update, and remove cart items
+- Proceed to checkout and view order
+- Switch categories and verify product updates

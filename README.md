@@ -1,56 +1,75 @@
-# bookcart-qa
----
-Automated UI tests for the [BookCart](https://bookcart.azurewebsites.net/) demo e-commerce application using **Java**, **Selenium WebDriver**, and **TestNG**.
+# BookCart QA Automation
+
+Automated UI smoke tests for the [BookCart e-commerce demo](https://bookcart.azurewebsites.net) using **Java**, **Selenium WebDriver**, and **TestNG**.
 
 ---
 
 ## Project Overview
 
-This project was created as part of a Junior QA Engineer assignment. It focuses on validating core user flows through smoke tests and reporting functional and security bugs found in the application.
+This project was created as part of a **Junior QA Engineer assignment**. It focuses on validating critical user flows through **automated smoke tests** and reporting **functional**, **UI**, and **security** bugs found during exploratory and structured testing.
 
 ---
 
-## Technologies Used
+##  Technologies Used
 
-- **Java 17**
-- **Selenium WebDriver 4.6.0**
-- **TestNG 7.6.1**
-- **ChromeDriver 136**
-- **IntelliJ IDEA**
+| Tool / Framework     | Version        |
+|----------------------|----------------|
+| Java                 | 17             |
+| Selenium WebDriver   | 4.6.0          |
+| TestNG               | 7.6.1          |
+| Chrome / ChromeDriver| v136           |
+| IntelliJ IDEA        | 2024.2         |
 
 ---
 
 ## Smoke Test Scenarios Covered
 
-| Test Case        | Description                                           |
-|------------------|-------------------------------------------------------|
-| `LoginTest`      | Verifies login with valid credentials                 |
-| `SearchTest`     | Searches and selects a book from search results       |
-| `CartTest`       | Logs in and adds a book to the cart                   |
-| `CheckoutTest`   | Logs in, adds a book to cart, and completes checkout  |
+| Test Class       | Description                                      |
+|------------------|--------------------------------------------------|
+| `LoginTest`      | Verifies login with valid credentials            |
+| `SearchTest`     | Searches for a book and verifies result          |
+| `CartTest`       | Logs in, adds book to cart, verifies cart        |
+| `CheckoutTest`   | Logs in, adds book, proceeds to checkout         |
+
+Each test simulates a real user flow and uses **assertions** to validate success conditions.
 
 ---
 
-## How to Run Tests
+## How to Run the Tests
 
-1. Make sure Chrome v136 and ChromeDriver 136 are installed.
-2. Open the project in IntelliJ.
-4. Navigate to any test class and right-click → **Run '...Test'**
-5. You can run all tests using the TestNG test runner.
+### Prerequisites:
+- Java 17 installed
+- Chrome browser v136 installed
+- Compatible `chromedriver.exe` (v136) placed and path updated in `BaseTest.java`
 
-Note: The provided code snippet includes a hardcoded path to the ChromeDriver in BaseTest (C:\Users\Ilma Hodžić\Desktop\chromedriver-win64\chromedriver.exe). This path will need to be updated to the correct location of your ChromeDriver executable.
-
----
-
-## Bugs Found
-
-See [`bug_report.md`](./bug_report.md) for a list of 18+ real issues discovered during testing (security, UI, session management).
+### Steps (in IntelliJ IDEA):
+1. Clone the repo
+2. Open in IntelliJ
+3. Right-click on any test (e.g. `CartTest`) → **Run 'CartTest'**
 
 ---
 
-## Author
+>  **Note:**  
+> The `BaseTest.java` class uses a hardcoded path for ChromeDriver:  
+> `C:\Users\Ilma Hodžić\Desktop\chromedriver-win64\chromedriver.exe`  
+> Make sure to update this path if running on a different machine.
+
+---
+
+##  Bug Reports
+
+A detailed list of 18 discovered bugs (functional + security) is provided in [bug_report.md](bug_report.md), including:
+
+-  Cart item loss after login
+-  JWT token not expiring correctly
+-  Token still valid after logout
+-  No feedback on failed login
+-  UI overlaps on registration form
+
+---
+
+##  Author
 
 **Ilma Hodžić**  
 Junior QA Engineer Candidate  
-Sarajevo  
-
+Sarajevo, Bosnia and Herzegovina  
